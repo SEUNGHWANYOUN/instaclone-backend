@@ -1,8 +1,8 @@
 import { 
     loadFilesSync,
     makeExecutableSchema,
-     margeTypeDefs,
-     mageResolvers,
+     mergeTypeDefs,
+     mergeResolvers,
        } 
       from "graphql-tools";
 
@@ -12,10 +12,11 @@ const loadedResolvers = loadFilesSync(
     `${__dirname}/**/*.{queries,mutations}.js`
 );
 
-const typeDefs = margeTypeDefs(loadedTypes);
-const resolvers = mageResolvers(loadedResolvers);
+//merge 하기 위해서는 각각의 typeDefs & resolvers must be export default
+const typeDefs = mergeTypeDefs(loadedTypes);
+const resolvers = mergeResolvers(loadedResolvers);
 
-const schema = makeExecutableSchema({typeDefs,resolvers});
+const schema = makeExecutableSchema({typeDefs, resolvers});
 
 export default  schema;
 

@@ -10,14 +10,14 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Movie{
-  //String? 입력이 필수가 아님
-    id Int @id @default(autoincrement()) 
-    title String 
-    author  String
-    year Int
-    gende String?
-    CreatedAt DateTime @default(now())
-    UpdateAt DateTime @updatedAt
-
+model User{
+  id Int @id @default(autoincrement())
+  firstName String
+  lastName String?
+  username String @unique
+  email String @unique
+  password String
+  createAt  DateTime @default(now())
+  updateAt  DateTime @updatedAt
+      
 }
