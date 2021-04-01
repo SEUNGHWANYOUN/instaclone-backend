@@ -7,7 +7,8 @@ const typeDefs = gql`
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
   # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
+  type Movie {
+    id: Int
     title: String
     author: String
   }
@@ -20,7 +21,7 @@ const typeDefs = gql`
   }
 `;
 
-const books = [
+const Movies = [
   {
     title: 'The Awakening',
     author: 'Kate Chopin',
@@ -35,7 +36,7 @@ const books = [
 // schema. This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
-    books: () => books,
+    Movies: () => Movies,
   },
 };
 
