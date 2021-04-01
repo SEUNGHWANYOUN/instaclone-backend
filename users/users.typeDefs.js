@@ -26,5 +26,7 @@ export default gql`
         username: String!
     ) :User
   }
+
+  
 `;
     
