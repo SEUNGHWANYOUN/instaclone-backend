@@ -1,6 +1,5 @@
 import { 
     loadFilesSync,
-    makeExecutableSchema,
      mergeTypeDefs,
      mergeResolvers,
        } 
@@ -13,10 +12,7 @@ const loadedResolvers = loadFilesSync(
 );
 
 //merge 하기 위해서는 각각의 typeDefs & resolvers must be export default
-const typeDefs = mergeTypeDefs(loadedTypes);
-const resolvers = mergeResolvers(loadedResolvers);
+export const typeDefs = mergeTypeDefs(loadedTypes);
+export const resolvers = mergeResolvers(loadedResolvers);
 
-const schema = makeExecutableSchema({typeDefs, resolvers});
-
-export default  schema;
 
