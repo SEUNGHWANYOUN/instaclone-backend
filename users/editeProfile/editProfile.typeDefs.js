@@ -16,6 +16,5 @@ type Mutation{
         ): EditProfileResult! 
 
 }
-
 `;
   

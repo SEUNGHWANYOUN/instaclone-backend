@@ -6,7 +6,7 @@ Instaclon Backend.
 
 - [x] Create Account
 - [x] see Profile
-- [ ] Login
+- [x] Login
 - [ ] Edit Profile
 - [ ] Follow User
 - [ ] Unfollow User

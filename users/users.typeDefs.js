@@ -1,9 +1,6 @@
 import { gql } from "apollo-server";
 
-
-
-
-//Mutation - graphql 에 넣을 함수 값을 선언
+//prisma 동기화를 위해 여기있어야함 나머지는 구조정렬화
 export default gql`
   type User{
       id: String!
@@ -14,47 +11,5 @@ export default gql`
       createAt: String!
       updateAt: String!
   }
-
-  type LoginResult {
-      ok: Boolean!
-      token: String
-      error: String
-  }
-
-  type EditProfileResult{
-    ok: Boolean!
-    error: String
-  }
-  
-
-  type Mutation{
-      creatAccount(
-      firstName: String!
-      lastName: String
-      username: String!
-      email: String!
-      password: String!
-      ): User
-
-      login(
-          username:String!, password:String!): LoginResult
-
-      editProfile(
-      firstName: String
-      lastName: String
-      username: String
-      email: String
-      password: String
-      ): EditProfileResult!    
-  }
-
-
-  type Query{
-    seeProfile(
-        username: String!
-    ) :User
-  }
-
-  
 `;
     
