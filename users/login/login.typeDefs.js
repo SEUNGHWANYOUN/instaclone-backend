@@ -10,10 +10,9 @@ type LoginResult {
 
 type Mutation{
     login(
-        username: String!,
-        password: String! )
-         : LoginResult
+        username: String!
+        password: String! 
+        ): LoginResult
 
 }
-
 `;
