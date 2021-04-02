@@ -10,8 +10,8 @@ export default {
                 email,
                 password
             }) => {
-                // check if username or email are already on DB
-                
+                try{
+                                    // check if username or email are already on DB          
                 const existingUser = await client.user.findFirst({
                     where :{
                         //OR : One or more conditions must return ture.
@@ -26,7 +26,11 @@ export default {
                         ],
                     },
                 });
-                console.log(existingUser);
+                
+                if(existingUser){
+                    throw new Error("This username/password is alreadt taken.");
+                }
+                //console.log(existingUser);
                 //hash password
                 const uglyPassword = await bcrypt.hash(password, 10);
                 //console.log(uglyPassword);
@@ -41,6 +45,14 @@ export default {
                     },
                 });
                 //save and retrun the user
+
+                //try 이용시 에러(무슨 에러든) catch로 넘어간다
+                }catch(e){
+
+                    return e;
+                
+                }
+
         },
     },
 };
