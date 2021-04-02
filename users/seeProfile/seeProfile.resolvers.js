@@ -1,4 +1,4 @@
-import client from "../client";
+import client from "../../client";
 
 export default {
 
@@ -13,6 +13,5 @@ export default {
         }),
 
     },
-    
 
 }
