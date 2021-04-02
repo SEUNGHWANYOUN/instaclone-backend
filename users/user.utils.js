@@ -35,14 +35,16 @@ export const protectResolver = (user) => {
     }
 };
 
-export const proteecedResolver = (ourResolver) => 
-    (root, args, context, info
-        ) => {
-        if (!context.loggedInuser) {
-            return {
-                ok: false,
-                error: "Please login to perform this action.",
-            };
-        }
-        return ourResolver(root, args, context, info);
-    };
+    export function protectedResolver(ourResolver){
+        return function(root, args, context, info){
+            if (!context.loggedInuser) {
+                return {
+                    ok: false,
+                    error: "Please login to perform this action.",
+                };
+            }
+            return ourResolver(root, args, context, info);
+
+        };
+
+    }
