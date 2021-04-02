@@ -1,5 +1,9 @@
 import { gql } from "apollo-server";
 
+
+
+
+//Mutation - graphql 에 넣을 함수 값을 선언
 export default gql`
   type User{
       id: String!
@@ -11,6 +15,12 @@ export default gql`
       updateAt: String!
   }
 
+  type LoginResult {
+      ok: Boolean!
+      token: String
+      error: String
+  }
+
   type Mutation{
       creatAccount(
       firstName: String!
@@ -19,6 +29,10 @@ export default gql`
       email: String!
       password: String!
       ): User
+
+      login(
+          username:String!, password:String!): LoginResult
+
   }
 
   type Query{
