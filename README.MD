@@ -9,10 +9,11 @@ Instaclon Backend.
 - [x] Login
 - [x] Edit Profile
 - [x] chage Avatar (Image Upload)
-- [ ] Follow User
-- [ ] Unfollow User
+- [x] Follow User
+- [x] Unfollow User
 - [ ] Search User
-- [ ] See Followers
+- [ ] See Followers and See Following w/ Pagination
+- [ ] Computed Felds
 - [ ] See Following
 
 

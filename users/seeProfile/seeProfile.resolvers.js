@@ -11,6 +11,10 @@ export default {
                 username,
                 
             },
+            // include: {
+            //     following: true,
+            //     followers: true,
+            // }
         }),
 
     },

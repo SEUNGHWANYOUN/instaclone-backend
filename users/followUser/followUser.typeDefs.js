@@ -9,7 +9,7 @@ export default gql`
 
  type  Mutation {
      followUser(
-         toFollow:String
+         username: String
          ): FollowUserResolt
  }
 `;
