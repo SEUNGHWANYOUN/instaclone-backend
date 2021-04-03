@@ -7,7 +7,19 @@ Instaclon Backend.
 - [x] Create Account
 - [x] see Profile
 - [x] Login
-- [ ] Edit Profile
+- [x] Edit Profile
+- [x] chage Avatar (Image Upload)
 - [ ] Follow User
 - [ ] Unfollow User
-- [ ] chage Avatar (Image Upload)
+- [ ] Search User
+- [ ] See Followers
+- [ ] See Following
+
+
+## Photos
+
+- [ ] See Photo
+- [ ] Upload Photo
+- [ ] Edit Photo
+- [ ] Like / Unlike Photo
+
