@@ -11,10 +11,11 @@ Instaclon Backend.
 - [x] chage Avatar (Image Upload)
 - [x] Follow User
 - [x] Unfollow User
-- [ ] Search User
-- [ ] See Followers and See Following w/ Pagination
-- [ ] Computed Felds
-- [ ] See Following
+- [x] Search User
+- [x] See Followers and See Following w/ Pagination
+- [x] See Following and See Following w/ Pagination
+- [x] Computed Felds
+
 
 
 ## Photos
