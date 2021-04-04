@@ -21,7 +21,8 @@ model User{
   password  String
   bio       String?
   avatar    String?
-  Photos    Photo[]
+  photos    Photo[]
+  likes     Like[]
   followers User[] @relation("FollowRelation", references: [id])
   following User[] @relation("FollowRelation", references: [id])
   createAt  DateTime @default(now())
@@ -35,6 +36,7 @@ model Photo {
   file      String
   captin    String?
   hashtags  Hashtag[]
+  likes     Like[]
   createAt  DateTime @default(now())
   updateAt  DateTime @updatedAt 
 }
@@ -45,5 +47,17 @@ model Hashtag {
   Photos    Photo[]
   createAt  DateTime @default(now())
   updateAt  DateTime @updatedAt     
+}
+
+model Like {
+    id        Int @id @default(autoincrement())
+    photo     Photo @relation(fields: [photoId], references: [id])
+    user      User  @relation(fields: [userId], references: [id])
+    photoId Int
+    userId Int     
+    createAt  DateTime @default(now())
+    updateAt  DateTime @updatedAt
+
+    @@unique([photoId, userId])
 
 }
