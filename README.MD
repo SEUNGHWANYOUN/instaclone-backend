@@ -17,11 +17,20 @@ Instaclon Backend.
 - [x] Computed Felds
 
 
-
 ## Photos
 
-- [ ] See Photo
-- [ ] Upload Photo
-- [ ] Edit Photo
+- [ ] Upload Photh (Parse #)
 - [ ] Like / Unlike Photo
+- [ ] See Photo
+- [ ] Edit Photo
+- [ ] See Photo Likes
+- [ ] See Feed
+- [ ] Search Photos
+- [ ] See Hasjtags
+
+## Comments
+
+- [ ] Comment on Photo
+- [ ] Edit Commit
+- [ ] Delete Comment
 
