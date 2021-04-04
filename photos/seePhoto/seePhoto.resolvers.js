@@ -6,5 +6,6 @@ export default{
         client.user.findUnique({
             where: id,
         }),
-    }
+    },
+    
 }

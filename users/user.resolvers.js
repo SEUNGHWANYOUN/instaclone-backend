@@ -48,5 +48,10 @@ export default {
              });
             return Boolean(exists);
         },
+        phtos: ({id}) => client.user.findUnique({
+            where:{
+                id
+
+        }}).Photos(),
     },
 };

@@ -9,8 +9,38 @@ export default {
                 }
             }), 
         
-        hashtag: ({id}) => client.hashtag.findMany({
-            whhere
+        hashtags: ({id}) => client.hashtag.findMany({
+            where: {
+                photos: {
+                    some:{
+                        id,
+                    }
+                }
+            }
         })
+    },
+
+    Hashtag: {
+        photos: ({id}, {page}, {loggedInUser}) => {
+            return client.hashtag.findUnique({
+                where: {
+                    id,
+                }
+            }).Photos();
+
+        },
+
+       totalPhotos: (parent) => {
+           client.photo.count({
+               where: {
+                  hashtags:{
+                      some:{
+                          id,
+                      }
+                  }
+               }
+           });
+       },
+
     },
 };

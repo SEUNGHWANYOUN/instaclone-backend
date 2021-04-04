@@ -19,14 +19,14 @@ Instaclon Backend.
 
 ## Photos
 
-- [ ] Upload Photh (Parse #)
-- [ ] Like / Unlike Photo
-- [ ] See Photo
+- [x] Upload Photo (Parse #)
+- [x] See Photo
+- [x] See Hashtags
+- [x] Search Photos
 - [ ] Edit Photo
+- [ ] Like / Unlike Photo
 - [ ] See Photo Likes
 - [ ] See Feed
-- [ ] Search Photos
-- [ ] See Hasjtags
 
 ## Comments
 
