@@ -23,6 +23,7 @@ model User{
   avatar    String?
   photos    Photo[]
   likes     Like[]
+  coments   Comment[]
   followers User[] @relation("FollowRelation", references: [id])
   following User[] @relation("FollowRelation", references: [id])
   createAt  DateTime @default(now())
@@ -37,6 +38,7 @@ model Photo {
   captin    String?
   hashtags  Hashtag[]
   likes     Like[]
+  coments   Comment[]
   createAt  DateTime @default(now())
   updateAt  DateTime @updatedAt 
 }
@@ -59,5 +61,16 @@ model Like {
     updateAt  DateTime @updatedAt
 
     @@unique([photoId, userId])
-
 }
+
+model Comment {
+    id        Int @id @default(autoincrement())
+    user      User  @relation(fields: [userId], references: [id])
+    photo     Photo @relation(fields: [photoId], references: [id])
+    payload   String
+    createAt  DateTime @default(now())
+    updateAt  DateTime @updatedAt
+    userId Int
+    photoId Int
+  
+}  

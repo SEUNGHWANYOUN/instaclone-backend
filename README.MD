@@ -26,11 +26,13 @@ Instaclon Backend.
 - [x] Edit Photo
 - [x] Like / Unlike Photo
 - [x] See Photo Likes
+- [ ] See Photo Comments
 - [x] See Feed
+- [ ] Is Mine (Deleate Photo)
 
 ## Comments
 
 - [ ] Comment on Photo
 - [ ] Edit Commit
-- [ ] Delete Comment
+- [ ] Delete Comment (Is Mine)
 
